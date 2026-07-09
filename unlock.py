@@ -114,6 +114,8 @@ increment = int(math.sqrt(imei)*1024)
 if quickstart==False:
     input('Press enter to reboot your device...\n')
 os.system('adb reboot bootloader')
+print('Waiting 10 seconds for device to enter bootloader...')
+time.sleep(10)
 #input('Press enter when your device is ready... (This may take time, depending on your phone)\n')
 
 codeOEM = bruteforceBootloader(increment)
